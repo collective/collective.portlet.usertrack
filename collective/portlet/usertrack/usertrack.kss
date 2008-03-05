@@ -1,0 +1,6 @@
+dl.portletUsertrack:timeout {
+    evt-timeout-delay: 30000;
+    action-server: refreshPortlet;
+    refreshPortlet-portlethash: kssAttr("portlethash", True);
+    refreshPortlet-name: nodeAttr(id);
+}

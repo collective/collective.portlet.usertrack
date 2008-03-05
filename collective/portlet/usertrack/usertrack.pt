@@ -1,0 +1,25 @@
+<dl class="portlet portletUsertrack"
+    i18n:domain="collective.portlet.usertrack">
+
+    <dt class="portletHeader">
+        <span class="portletTopLeft"></span>
+        <span i18n:translate="portlet_header">
+           Active Users
+        </span>
+        <span class="portletTopRight"></span>
+    </dt>
+
+    <dd class="portletItem odd">
+        <ul tal:condition="view/users">
+            <li tal:repeat="user view/users">
+                <img tal:replace="structure user/portrait"
+                     tal:condition="user/portrait"/>
+                <span tal:content="user/fullname">John Doe</span>
+            </li>
+        </ul>
+    </dd>
+
+    <span class="portletBotomLeft"></span>
+    <span class="portletBottomRight"></span>
+
+</dl>

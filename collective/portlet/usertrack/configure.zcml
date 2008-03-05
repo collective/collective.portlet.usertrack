@@ -1,0 +1,46 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:five="http://namespaces.zope.org/five"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    i18n_domain="collective.portlet.usertrack">
+
+    <five:registerPackage package="." />
+
+    <include package="plone.validatehook" />
+
+    <browser:resource
+       name="usertrack.kss"
+       file="usertrack.kss"
+       />
+
+    <browser:resource
+       name="usertrack.css"
+       file="usertrack.css"
+       />
+
+    <subscriber
+       for="* plone.validatehook.interfaces.IPostValidationEvent"
+       handler=".events.ValidateHook" />
+
+    <genericsetup:registerProfile
+       name="default"
+       title="User tracker"
+       directory="profiles/default"
+       description="User activity portlet"
+       provides="Products.GenericSetup.interfaces.EXTENSION"
+       />
+
+    <plone:portlet
+        name="collective.portlet.usertrack.Usertrack"
+        interface=".usertrack.IUsertrack"
+        assignment=".usertrack.Assignment"
+        view_permission="zope2.View"
+        edit_permission="cmf.ManagePortal"
+        renderer=".usertrack.Renderer"
+        addview=".usertrack.AddForm"
+        editview=".usertrack.EditForm"
+        />
+
+</configure>

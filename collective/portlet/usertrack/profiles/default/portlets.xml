@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<portlets>
+
+ <!-- Portlet type registrations -->
+
+ <portlet
+   addview="collective.portlet.usertrack.Usertrack"
+   title="User tracker"
+   description="User activity portlet"
+   />
+
+</portlets>
