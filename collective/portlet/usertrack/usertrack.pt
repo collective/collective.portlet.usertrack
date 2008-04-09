@@ -12,8 +12,9 @@
     <dd class="portletItem odd">
         <ul tal:condition="view/users">
             <li tal:repeat="user view/users">
-                <img tal:replace="structure user/portrait"
-                     tal:condition="user/portrait"/>
+                <span class="passepartout" tal:condition="user/portrait">
+                    <img tal:replace="structure user/portrait"/>
+                </span>
                 <span tal:content="user/fullname">John Doe</span>
             </li>
         </ul>
