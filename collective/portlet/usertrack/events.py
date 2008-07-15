@@ -30,10 +30,10 @@ def GetUsersForPath(path, after=None):
 
     if after is None:
         return [user for (id, user) in _users.items()
-                    if path.startswith(id[0])]
+                    if  (id[0]!='' and path.startswith(id[0]))]
     else:
         return [user for (id, user) in _users.items()
-                    if path.startswith(id[0]) and user['time']>=after]
+                    if (id[0]!='' and path.startswith(id[0])) and user['time']>=after]
 
 
 
