@@ -1,4 +1,5 @@
 from Acquisition import aq_parent
+from AccessControl.User import SpecialUser
 from time import time
 from zope.interface import Interface
 from zope.component import adapter
@@ -8,6 +9,10 @@ _users = {}
 
 @adapter(Interface, IPostValidationEvent)
 def ValidateHook(object, event):
+    # Skip special users like the anonymous user and the emergency user.
+    if isinstance(event.user, SpecialUser):
+        return
+
     if getattr(object, "getPhysicalPath", None) is None:
         if getattr(aq_parent(object), "getPhysicalPath", None) is not None:
             object=aq_parent(object)
@@ -30,10 +35,10 @@ def GetUsersForPath(path, after=None):
 
     if after is None:
         return [user for (id, user) in _users.items()
-                    if  (id[0]!='' and path.startswith(id[0]))]
+                    if path.startswith(id[0])]
     else:
         return [user for (id, user) in _users.items()
-                    if (id[0]!='' and path.startswith(id[0])) and user['time']>=after]
+                    if path.startswith(id[0]) and user['time']>=after]
 
 
 
