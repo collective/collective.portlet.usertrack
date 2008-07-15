@@ -21,7 +21,6 @@
        />
 
     <subscriber
-       for="* plone.validatehook.interfaces.IPostValidationEvent"
        handler=".events.ValidateHook" />
 
     <genericsetup:registerProfile
