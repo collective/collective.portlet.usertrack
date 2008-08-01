@@ -16,10 +16,10 @@ roles
   You can use this to only show editors for example.
 
 folder_type
-  This option is influences how the role check is done. If you select a
-  content type here the system will walk up through the breadcrumb
-  trail and look for the first item of a selected type. The roles of the
-  user at that location will be used when applying the roles check.
+  This option influences how the role check is done. If you select a content
+  type here the system will walk up through the breadcrumb trail and look for
+  the first item of a selected type. The roles of the user at that location
+  will be used when applying the roles check.
 
 
 Caveats

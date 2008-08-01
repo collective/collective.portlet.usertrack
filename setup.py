@@ -17,7 +17,7 @@ setup(name='collective.portlet.usertrack',
       keywords='user tracking plone',
       author='Wichert Akkerman',
       author_email='wichert@wiggy.net',
-      url='http://plone.org',
+      url='http://pypi.python.org/pypi/collective.portlet.usertrack',
       license='GPL',
       packages=find_packages(exclude=['ez_setup']),
       namespace_packages=['collective', 'collective.portlet'],
@@ -27,7 +27,4 @@ setup(name='collective.portlet.usertrack',
           'setuptools',
           'plone.validatehook',
       ],
-      entry_points="""
-      # -*- Entry points: -*-
-      """,
       )
