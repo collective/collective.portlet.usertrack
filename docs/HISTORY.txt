@@ -4,6 +4,9 @@ Changelog
 1.0 - Unreleased
 ----------------
 
+* Add french translation.
+  [kdeldycke] 2009-04-23
+
 
 1.0a1 - August 1, 2008
 ----------------------

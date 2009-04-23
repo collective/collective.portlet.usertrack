@@ -1,0 +1,76 @@
+# translation of collective.portlet.usertrack.pot to French
+# Kevin Deldycke <kevin@deldycke.com>, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: collective.portlet.usertrack-fr\n"
+"POT-Creation-Date: 2009-04-23 14:40-0430\n"
+"PO-Revision-Date: 2009-04-23 10:39-0430\n"
+"Last-Translator: Kevin Deldycke <kevin@deldycke.com>\n"
+"Language-Team: French <plone-fr@lists.plone.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language-Code: fr\n"
+"Language-Name: French\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: collective.portlet.usertrack\n"
+"X-Is-Fallback-For: \n"
+"X-Generator: vim\n"
+
+#: ./usertrack.py:131
+msgid "Add a user track portlet"
+msgstr "Ajouter un portlet user track"
+
+#: ./usertrack.py:144
+msgid "Edit the user track portlet"
+msgstr "Modifier le portlet user track"
+
+#: ./usertrack.py:134
+msgid "Portlet configuration"
+msgstr "Configuration du portlet"
+
+#. Default: "Select the content type where roles will be checked. The system will look for the first item of this type in the breadcrumbs and check roles there."
+#: ./usertrack.py:43
+msgid "help_folder_type"
+msgstr "Définit le type de contenu sur lequel les rôles vont être vérifiés. Le système va faire cette vérification sur le premier élément du breadcrumb appartenant à ce type."
+
+#. Default: "The user track portlet shows the current active users."
+#: ./usertrack.py:132
+msgid "help_portlet"
+msgstr "Le portlet user track affiche les utilisateurs actuellement en ligne."
+
+#. Default: "Select roles users must have for them to appear in in the portlet. Users must have at least one of these roles to appear in the portlet."
+#: ./usertrack.py:34
+msgid "help_roles"
+msgstr "Définit les rôles que les utilisateurs doivent posséder pour apparaitre dans le portlet. Les utilisateurs possédant au moins un des rôles selectionné apparait dans le portlet."
+
+#. Default: "Select how long (in minutes) it takes for a user to be considered inactive."
+#: ./usertrack.py:25
+msgid "help_timeout"
+msgstr "Définit le temps (en minutes) après lequel un utilisateur est considéré comme inactif."
+
+#. Default: "Folder type"
+#: ./usertrack.py:42
+msgid "label_folder_type"
+msgstr "Type de contenu"
+
+#. Default: "Roles"
+#: ./usertrack.py:33
+msgid "label_roles"
+msgstr "Rôles"
+
+#. Default: "Inactivity timeout"
+#: ./usertrack.py:24
+msgid "label_timeout"
+msgstr "Délai d'inactivité"
+
+#. Default: "Active Users"
+#: ./usertrack.pt:6
+msgid "portlet_header"
+msgstr "En ligne"
+
+#. Default: "Active Users"
+#: ./usertrack.py:68
+msgid "portlet_title"
+msgstr "En ligne"
