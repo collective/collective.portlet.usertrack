@@ -7,6 +7,12 @@ Changelog
 * Add french translation.
   [kdeldycke] 2009-04-23
 
+* Add Spanish translation.
+  [macagua] 2009-02-17
+
+* Add Master Template translation.
+  [macagua] 2009-02-17
+
 
 1.0a1 - August 1, 2008
 ----------------------
