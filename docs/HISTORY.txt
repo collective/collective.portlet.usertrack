@@ -1,15 +1,18 @@
 Changelog
 =========
 
-1.0 - Unreleased
-----------------
+1.0.dev - Unreleased
+--------------------
+
+* Fix bad spelling in portlet CSS class name.
+* To avoid confusion, add ".dev" suffix to version.txt as long as a new version
+  is not released.
+  [kdeldycke] 2009-05-12
 
 * Add french translation.
   [kdeldycke] 2009-04-23
 
 * Add Spanish translation.
-  [macagua] 2009-02-17
-
 * Add Master Template translation.
   [macagua] 2009-02-17
 
