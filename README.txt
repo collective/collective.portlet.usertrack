@@ -26,6 +26,6 @@ Caveats
 =======
 
 * User tracking does not work in sites which use multiple ZEO clients. The
-  list of active users is only kept in the memoery of the ZEO client
+  list of active users is only kept in the memory of the ZEO client
   processing the request, so other clients will not see any activity.
  
