@@ -25,7 +25,16 @@ folder_type
 Caveats
 =======
 
-* User tracking does not work in sites which use multiple ZEO clients. The
-  list of active users is only kept in the memory of the ZEO client
-  processing the request, so other clients will not see any activity.
- 
+* The default configuration uses a global dictionary through DictStorage 
+  for storing userinformation.
+  This will not work with multiple ZEO clients in separate processes that
+  don't share this dictionary. To use the usertrack portlet with a ZEO setup,
+  install memcached and use the "MemcacheStorage" by using the following zcml
+  snippet in an overrides.zcml somewhere:
+
+      <utility
+        factory="collective.portlet.usertrack.storage.MemcacheStorage"
+        provides="collective.portlet.usertrack.interfaces.ITrackerStorage"
+        />
+
+  

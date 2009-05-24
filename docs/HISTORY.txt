@@ -4,6 +4,12 @@ Changelog
 1.0.dev - Unreleased
 --------------------
 
+* Fix improper check on portal type in usertrack.py
+* Implement ZEO support through different storages, specifically through
+  the MemcacheStorage. The traditional behaviour is preserved through the
+  DictStorage which is still the default.
+  [ivo] 2009-05-24
+
 * Fix bad spelling in portlet CSS class name.
 * To avoid confusion, add ".dev" suffix to version.txt as long as a new version
   is not released.

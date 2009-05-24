@@ -42,4 +42,9 @@
         editview=".usertrack.EditForm"
         />
 
+    <utility
+        factory=".storage.DictStorage"
+        provides=".interfaces.ITrackerStorage"
+        />
+
 </configure>

@@ -2,8 +2,10 @@ from Acquisition import aq_parent
 from AccessControl.User import SpecialUser
 from time import time
 from zope.interface import Interface
-from zope.component import adapter
+from zope.component import adapter, getUtility
 from plone.validatehook.interfaces import IPostValidationEvent
+
+from collective.portlet.usertrack.interfaces import ITrackerStorage
 
 _users = {}
 
@@ -26,7 +28,10 @@ def ValidateHook(object, event):
     if not path.endswith("/"):
         path+="/"
 
-    _users[user]=dict(userid=userid, path=path, time=time())
+    storage = getUtility(ITrackerStorage)
+
+    storage.storeUser(user, userid, path, time())
+
 
 
 def GetUsersForPath(path, after=None):

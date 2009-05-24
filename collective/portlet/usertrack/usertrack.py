@@ -10,7 +10,8 @@ from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from Products.CMFCore.interfaces import ISiteRoot
 from Products.CMFCore.utils import getToolByName
 from collective.portlet.usertrack import UsertrackMessageFactory as _
-from collective.portlet.usertrack.events import GetUsersForPath
+from collective.portlet.usertrack.interfaces import ITrackerStorage
+
 
 class IUsertrack(IPortletDataProvider):
     """A portlet
@@ -93,7 +94,8 @@ class Renderer(base.Renderer):
         site=getUtility(ISiteRoot)
         rootpath="/".join(site.getPhysicalPath())
 
-        users=GetUsersForPath(rootpath, after=(time()-(self.data.timeout*60)))
+        storage = getUtility(ITrackerStorage)
+        users = storage.getUser(rootpath, after=(time()-(self.data.timeout*60)))
         users=[self.mt.getMemberById(user["userid"]) for user in users]
         users=filter(None, users)
 
@@ -101,7 +103,7 @@ class Renderer(base.Renderer):
             context=aq_inner(self.context)
             if self.data.folder_type:
                 for entry in aq_chain(context):
-                    if getattr(entry, "portal_type", None)==self.data.folder_type:
+                    if getattr(entry, "portal_type", None) in self.data.folder_type:
                         context=entry
                         break
                 else:
