@@ -87,12 +87,13 @@ class MemcacheStorage(object):
 
         all_bases = self.get_storage()
 
+        res = []
         for basepath, users in all_bases.items():
             if path.startswith(basepath):
                 if after is None:
-                    return users.values()
+                    res += users.values()
                 else:
-                    return [u for u in users.values() if u['time'] >= after]
+                    res += [u for u in users.values() if u['time'] >= after]
         ## cleanup?
-        return []
+        return res
 
