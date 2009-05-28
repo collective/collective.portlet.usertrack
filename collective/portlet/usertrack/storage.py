@@ -42,6 +42,9 @@ class MemcacheStorage(object):
     def getMCClient(self):
         import memcache
 
+        if hasattr(self, 'cache'):
+            return self.cache
+
         mchostport = os.environ.get('MEMCACHE_HOST', '127.0.0.1:11211')
         if ':' in mchostport:
             host, port = mchostport.split(':', 1)
@@ -55,7 +58,8 @@ class MemcacheStorage(object):
 
         connectstr = "%s:%d" % (host, port)
         mc = memcache.Client([connectstr], debug=0)
-        return mc
+        self.cache = mc
+        return self.cache
 
     def get_storage(self):
         mc = self.getMCClient()
