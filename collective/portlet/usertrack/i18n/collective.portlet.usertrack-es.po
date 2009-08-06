@@ -1,4 +1,4 @@
-# translation of collective.portlet.usertrack-es.po to Spanish
+# translation of collective.portlet.usertrack.po to Spanish
 # Leonardo Caballero <leonardocaballero@gmail.com>, 2009.
 msgid ""
 msgstr ""
@@ -16,7 +16,6 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: collective.portlet.usertrack\n"
 "X-Is-Fallback-For: es-ar es-bo es-cl es-co es-cr es-do es-ec es-es es-sv es-gt es-hn es-mx es-ni es-pa es-py es-pe es-pr es-us es-uy es-ve\n"
-"X-Generator: KBabel 1.11.4\n"
 
 #: ./usertrack.py:131
 msgid "Add a user track portlet"
@@ -33,7 +32,7 @@ msgstr "Configuración del Portlet "
 #. Default: "Select the content type where roles will be checked. The system will look for the first item of this type in the breadcrumbs and check roles there."
 #: ./usertrack.py:43
 msgid "help_folder_type"
-msgstr "Selccione el tipo de contenido donde los roles serán verificados. El sistema observará por el primer elemento de este tipo en los detalles y verificará los roles allí."
+msgstr "Seleccione el tipo de contenido donde los roles serán verificados. El sistema observará por el primer elemento de este tipo en los detalles y verificará los roles allí."
 
 #. Default: "The user track portlet shows the current active users."
 #: ./usertrack.py:132
@@ -43,7 +42,7 @@ msgstr "El portlet de las huellas del usuario muestra los actuales usuarios acti
 #. Default: "Select roles users must have for them to appear in in the portlet. Users must have at least one of these roles to appear in the portlet."
 #: ./usertrack.py:34
 msgid "help_roles"
-msgstr "Seleccione los roles de usuario deben tener para que aparezcan en el portlet. Los usuarios deben tener al menos uno de estes roles para aparecer en el portlet."
+msgstr "Seleccione los roles de usuario deben tener para que aparezcan en el portlet. Los usuarios deben tener al menos uno de estos roles para aparecer en el portlet."
 
 #. Default: "Select how long (in minutes) it takes for a user to be considered inactive."
 #: ./usertrack.py:25
