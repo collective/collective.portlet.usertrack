@@ -9,13 +9,15 @@
         <span class="portletTopRight"></span>
     </dt>
 
-    <dd class="portletItem odd">
+    <dd class="portletItem odd" tal:define="portal_url here/portal_url">
         <ul tal:condition="view/users">
             <li tal:repeat="user view/users">
-                <span class="passepartout" tal:condition="user/portrait">
-                    <img tal:replace="structure user/portrait"/>
-                </span>
-                <span tal:content="user/fullname">John Doe</span>
+                <a tal:attributes="href string:${portal_url}/author/${user/userid}">
+                    <span class="passepartout" tal:condition="user/portrait">
+                        <img tal:replace="structure user/portrait"/>
+                    </span>
+                    <span tal:content="user/fullname">John Doe</span>
+                </a>
             </li>
         </ul>
     </dd>

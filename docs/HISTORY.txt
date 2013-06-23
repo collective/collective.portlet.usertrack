@@ -1,6 +1,12 @@
 Changelog
 =========
 
+1.1 - Unreleased
+----------------
+
+* The portlet now links each user to the users author page.
+
+
 1.0 - October 26, 2010
 ----------------------
 
