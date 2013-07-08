@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 import os
 
-version = '1.1b2.dev0'
+version = '1.1'
 
 setup(name='collective.portlet.usertrack',
       version=version,
@@ -12,6 +12,8 @@ setup(name='collective.portlet.usertrack',
       classifiers=[
         "Framework :: Plone",
         "Programming Language :: Python",
+        "Programming Language :: Python :: 2.6",
+        "Programming Language :: Python :: 2.7",
         "Topic :: Software Development :: Libraries :: Python Modules",
         ],
       keywords='user tracking plone',
