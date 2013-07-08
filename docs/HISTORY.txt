@@ -10,7 +10,7 @@ Changelog
 1.1 (2013-07-08)
 ----------------
 
-- Nothing changed yet.
+- No changes since beta.
 
 
 1.1b1 (2013-06-25)
