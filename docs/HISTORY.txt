@@ -1,10 +1,11 @@
 Changelog
 =========
 
-1.2 (unreleased)
-----------------
+1.1.1 (2013-11-10)
+------------------
 
-- Nothing changed yet.
+- Fixed a bug where in some cases on some Plone versions you
+  can get an error on loading the ZCML because of a missing permission.
 
 
 1.1 (2013-07-08)
