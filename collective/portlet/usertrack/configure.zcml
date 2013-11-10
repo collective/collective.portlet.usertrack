@@ -6,6 +6,8 @@
     xmlns:plone="http://namespaces.plone.org/plone"
     i18n_domain="collective.portlet.usertrack">
 
+    <include package="Products.CMFCore" />
+    
     <five:registerPackage package="." />
 
     <include package="plone.validatehook" />
