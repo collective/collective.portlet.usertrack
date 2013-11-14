@@ -1,3 +1,7 @@
+.. image:: https://secure.travis-ci.org/collective/collective.portlet.usertrack.png?branch=master
+    :alt: Travis CI badge
+    :target: http://travis-ci.org/collective/collective.portlet.usertrack
+
 Introduction
 ============
 
@@ -36,5 +40,3 @@ Caveats
         factory="collective.portlet.usertrack.storage.MemcacheStorage"
         provides="collective.portlet.usertrack.interfaces.ITrackerStorage"
         />
-
-  
