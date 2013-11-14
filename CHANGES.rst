@@ -4,7 +4,9 @@ Changelog
 1.1.2 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Update package classifiers to indicate development status, compatibility
+  and license used.
+  [hvelarde]
 
 
 1.1.1 (2013-11-10)
