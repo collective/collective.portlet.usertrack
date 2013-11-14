@@ -34,7 +34,7 @@ Caveats
   This will not work with multiple ZEO clients in separate processes that
   don't share this dictionary. To use the usertrack portlet with a ZEO setup,
   install memcached and use the "MemcacheStorage" by using the following zcml
-  snippet in an overrides.zcml somewhere:
+  snippet in an overrides.zcml somewhere::
 
       <utility
         factory="collective.portlet.usertrack.storage.MemcacheStorage"
